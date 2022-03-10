@@ -1,3 +1,7 @@
+const content = `
+  <div>template</div>
+`
+
 class ArticleLists extends HTMLElement {
   constructor() {
     super();
@@ -8,10 +12,10 @@ class ArticleLists extends HTMLElement {
   }
 
   connectedCallback() {
+    const template = document.createElement('template')
+    template.innerHTML = content
     this.attachShadow({ mode: 'open' })
-    this.shadowRoot.innerHTML = `
-      <div>template</div>
-    `
+    this.shadowRoot.append(template.content.cloneNode(true))
   }
 
   disconnectedCallback() {}
