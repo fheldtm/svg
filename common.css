@@ -1,0 +1,22 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.article-lists {
+  width: 250px;
+  height: 100%;
+  box-shadow: 1px 0 6px -3px rgba(0, 0, 0, 0.16);
+}
+
+section.container {
+  width: calc(100% - 250px);
+  height: 100%;
+}
